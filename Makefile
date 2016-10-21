@@ -1,4 +1,6 @@
-ALL:
+ALL: build-libs
+
+build-libs:
 	$(MAKE) -C group_a/nativelib
 	$(MAKE) -C group_a/cythlib
 	$(MAKE) -C group_b/nativelib
@@ -9,3 +11,5 @@ clean:
 	$(MAKE) -C group_a/cythlib clean
 	$(MAKE) -C group_b/nativelib clean
 	$(MAKE) -C group_b/cythlib clean
+
+.PHONY: build-libs clean

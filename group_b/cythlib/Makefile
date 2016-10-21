@@ -4,7 +4,6 @@ ALL: cython run-test
 cython:
 	CFLAGS="-I../nativelib" LDFLAGS="-L../nativelib" python setup.py build_ext -i
 
-
 run-test:
 	LD_LIBRARY_PATH=../nativelib PYTHONPATH=. python -c 'import cynative ; cynative.cyprint_native_version()'
 
