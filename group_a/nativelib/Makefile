@@ -1,4 +1,5 @@
 ALL: nativelib test run-test
+	@echo "run 'make help' for more info"
 
 MAJ=1
 MIN=1
@@ -32,4 +33,4 @@ help:
 	@echo "make run-test"
 	@echo "make get-soname"
 
-.PHONY: ALL run-test clean get-soname nativelib.h
+.PHONY: ALL run-test clean get-soname nativelib.h help
